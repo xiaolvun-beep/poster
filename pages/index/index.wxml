@@ -1,0 +1,53 @@
+<view class="home page">
+  <view class="topbar">
+    <view class="brand-icon"><view class="brand-icon-core"></view></view>
+    <view class="brand-copy"><text class="brand-name">贴广告记录器</text><text class="brand-en">WORK TRACKER</text></view>
+  </view>
+
+  <view wx:if="{{!working}}" class="idle">
+    <view class="idle-kicker"><view class="kicker-line"></view><text>READY WHEN YOU ARE</text></view>
+    <view class="idle-headline"><text>把每一步，</text><text>变成看得见的收获。</text></view>
+    <view class="idle-description">开始工作后，时间、路线和收入会在这里同步记录。</view>
+    <view class="idle-visual">
+      <view class="visual-top"><text>YOUR NEXT ROUTE</text><text class="visual-cross">✳</text></view>
+      <view class="visual-route">
+        <view class="route-stem"></view>
+        <view class="route-stop route-stop-first"><view class="route-pin"></view><text>从这里出发</text></view>
+        <view class="route-stop route-stop-last"><view class="route-pin"></view><text>去往下一站</text></view>
+      </view>
+      <view class="visual-bottom"><text>实时轨迹</text><text>工作计时</text><text>收入统计</text></view>
+    </view>
+    <button class="start-button" bindtap="start" loading="{{starting}}" disabled="{{starting}}"><text>开始工作</text><text class="button-arrow">↗</text></button>
+    <view class="idle-footnote">开启定位后，才会开始记录本次路线</view>
+  </view>
+
+  <view wx:else class="active">
+    <view class="session-card">
+      <view class="session-top">
+        <view class="status-chip {{paused ? 'chip-paused' : ''}}"><view class="status-dot {{paused ? 'is-paused' : ''}}"></view><text>{{paused ? '工作已暂停' : '正在记录'}}</text></view>
+        <text class="session-code">SESSION / LIVE</text>
+      </view>
+      <view class="metric-label">已工作时间</view>
+      <view class="time amount">{{duration}}</view>
+      <view class="hero-rule"></view>
+      <view class="session-metrics">
+        <view class="session-metric"><text class="session-metric-label">当前收入</text><text class="income amount">¥{{income}}</text></view>
+        <view class="metric-split"></view>
+        <view class="session-metric"><text class="session-metric-label">移动距离</text><text class="travel amount">{{distance}}</text></view>
+      </view>
+    </view>
+
+    <view class="map-card">
+      <view class="map-heading">
+        <view><view class="map-overline">ROUTE / 轨迹</view><view class="map-title">本次路线</view></view>
+        <view class="map-live {{paused ? 'is-paused' : ''}}"><view class="map-live-dot"></view><text>{{paused ? '已暂停' : '实时更新'}}</text></view>
+      </view>
+      <view class="map-area"><track-map points="{{points}}" live="{{true}}" openable="{{true}}" bindopen="openFullMap" /></view>
+      <view class="map-open-hint" bindtap="openFullMap">点击地图查看全屏轨迹 ↗</view>
+      <view class="map-info"><view class="map-info-left"><view class="info-point"></view><text>{{pointCount}} 个定位点</text></view><text class="map-sync">{{syncStatus}}</text></view>
+      <view wx:if="{{trackingError}}" class="tracking-warning">{{trackingError}}</view>
+    </view>
+
+    <view class="actions"><button class="pause-button" bindtap="pauseOrResume" disabled="{{busy}}">{{paused ? '继续工作' : '暂停记录'}}</button><button class="finish-button" bindtap="finish" disabled="{{busy}}">结束工作 <text>↗</text></button></view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/wallet/wallet",
+    "pages/settings/settings",
+    "pages/detail/detail",
+    "pages/route/route",
+    "pages/settlement/settlement",
+    "pages/boss-earnings/boss-earnings",
+    "pages/bosses/bosses"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F8F9FB",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F9FB"
+  },
+  "tabBar": {
+    "color": "#89909A",
+    "selectedColor": "#275C37",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "工作" },
+      { "pagePath": "pages/history/history", "text": "记录" },
+      { "pagePath": "pages/wallet/wallet", "text": "钱包" },
+      { "pagePath": "pages/settings/settings", "text": "设置" }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": { "desc": "记录工作期间的行走轨迹和距离" }
+  },
+  "requiredBackgroundModes": ["location"],
+  "requiredPrivateInfos": ["getLocation", "onLocationChange", "startLocationUpdate", "startLocationUpdateBackground"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

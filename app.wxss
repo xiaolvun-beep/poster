@@ -1,0 +1,17 @@
+page { background: #F8F9FB; color: #17202E; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; }
+view, text, button, input { box-sizing: border-box; }
+button { display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 24rpx; border: 0; line-height: 1.2; text-align: center; }
+button::after { border: 0; }
+.page { min-height: 100vh; padding: 32rpx 32rpx 48rpx; }
+.eyebrow { color: #7F8997; font-size: 24rpx; letter-spacing: 2rpx; }
+.title { font-size: 52rpx; font-weight: 700; letter-spacing: -1rpx; }
+.muted { color: #84909F; }
+.card { background: #fff; border-radius: 28rpx; padding: 30rpx; box-shadow: 0 8rpx 30rpx rgba(29,48,75,.035); }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.divider { height: 1rpx; background: #EEF0F3; margin: 24rpx 0; }
+.primary { background: #275C37; color: white; border-radius: 20rpx; font-weight: 600; }
+.secondary { background: #E7F3E5; color: #275C37; border-radius: 20rpx; font-weight: 600; }
+.danger { background: #FFF0EE; color: #C5493D; border-radius: 20rpx; font-weight: 600; }
+.empty { color: #8A95A3; text-align: center; padding: 100rpx 28rpx; font-size: 28rpx; line-height: 1.7; }
+.section-title { font-size: 29rpx; font-weight: 650; margin: 42rpx 0 18rpx; }
+.amount { font-variant-numeric: tabular-nums; }

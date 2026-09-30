@@ -1,0 +1,3 @@
+<view class="route-page">
+  <track-map class="route-map" points="{{points}}" live="{{live}}" fit-all="{{!live}}" loading="{{loading}}" fullscreen="{{true}}" back-top="{{backTop}}" bindback="back" />
+</view>

@@ -1,0 +1,1 @@
+{ "navigationBarTitleText": "", "navigationBarBackgroundColor": "#F3F6F1", "navigationBarTextStyle": "black", "usingComponents": { "track-map": "/components/track-map/track-map" } }

@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="eyebrow">工资账本</view><view class="title">钱包</view>
+  <view class="balance card"><view class="eyebrow">待结算总额</view><view class="balance-number amount">¥{{pending}}</view><view class="totals row"><view><view class="label">累计赚取</view><view class="value amount">¥{{earned}}</view></view><view><view class="label">已结算</view><view class="value amount">¥{{settled}}</view></view></view></view>
+  <view class="section-title">按老板待结算</view>
+  <view wx:if="{{groups.length === 0}}" class="empty small">目前没有待结算工作</view>
+  <view wx:for="{{groups}}" wx:key="bossId" class="group card" data-boss="{{item.bossId}}" bindtap="openBossEarnings"><view class="row"><view><view class="group-name">{{item.bossName}}</view><view class="group-count">{{item.count}} 笔待结算 · 点击查看明细</view></view><view class="group-money amount">¥{{item.money}} ›</view></view><button class="secondary settle-button" data-boss="{{item.bossId}}" catchtap="settle">{{item.buttonText}}</button></view>
+  <view class="section-title">结算记录</view>
+  <view wx:if="{{settlements.length === 0}}" class="empty small">还没有结算记录</view>
+  <view wx:for="{{settlements}}" wx:key="id" class="settlement card row" data-id="{{item.id}}" bindtap="openSettlement"><view><view class="group-name">{{item.bossName}}</view><view class="group-count">{{item.time}} · {{item.count}} 笔</view></view><view class="group-money amount">¥{{item.amount}} ›</view></view>
+</view>

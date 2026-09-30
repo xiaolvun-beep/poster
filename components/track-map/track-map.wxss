@@ -1,0 +1,11 @@
+:host { display: block; height: 100%; }
+.map-shell { width: 100%; height: 100%; overflow: hidden; background: #EAF0EA; border-radius: 22rpx; }
+.map-shell-full { position: relative; border-radius: 0; }
+.track-map { width: 100%; height: 100%; }
+.full-map-back, .full-empty-back { position: absolute; left: 16px; width: 44px; height: 44px; line-height: 44px; border-radius: 22px; background: #FFFFFF; color: #1B2C21; text-align: center; font-size: 36px; box-shadow: 0 4px 16px rgba(0, 0, 0, .16); }
+.full-empty-back { z-index: 1; }
+.map-empty { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(145deg, #EAF1E9, #F5F8F2); }
+.empty-radar { display: flex; align-items: center; justify-content: center; width: 108rpx; height: 108rpx; margin-bottom: 24rpx; border: 1rpx solid #B2C8AD; border-radius: 50%; box-shadow: 0 0 0 22rpx rgba(131, 166, 120, .11), 0 0 0 46rpx rgba(131, 166, 120, .055); }
+.empty-radar-core { width: 24rpx; height: 24rpx; border-radius: 50%; background: #2D7FF9; border: 6rpx solid #153E7A; box-shadow: 0 0 18rpx rgba(45, 127, 249, .45); }
+.map-empty-title { color: #203629; font-size: 28rpx; font-weight: 650; }
+.map-empty-subtitle { margin-top: 8rpx; color: #7B8D7C; font-size: 22rpx; }

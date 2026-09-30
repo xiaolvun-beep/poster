@@ -1,0 +1,13 @@
+<view class="map-shell {{fullscreen ? 'map-shell-full' : ''}}">
+  <map wx:if="{{hasPoints}}" id="track-map" class="track-map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" polyline="{{polylines}}" circles="{{circles}}" show-location="{{live}}" bindtap="onMapTap">
+    <cover-view wx:if="{{fullscreen}}" class="full-map-back" style="top: {{backTop}}px" bindtap="onBack">‹</cover-view>
+  </map>
+  <view wx:else class="map-empty" bindtap="onMapTap">
+    <view class="empty-radar"><view class="empty-radar-core"></view></view>
+    <view wx:if="{{loading}}" class="map-empty-title">正在读取轨迹</view>
+    <view wx:else class="map-empty-title">{{live ? '正在连接定位' : '暂无路线数据'}}</view>
+    <view wx:if="{{loading}}" class="map-empty-subtitle">请稍候，路线正在加载</view>
+    <view wx:else class="map-empty-subtitle">{{live ? '开始移动后，轨迹会出现在这里' : '本次没有可显示的定位点'}}</view>
+    <view wx:if="{{fullscreen}}" class="full-empty-back" style="top: {{backTop}}px" bindtap="onBack">‹</view>
+  </view>
+</view>

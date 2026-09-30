@@ -1,0 +1,9 @@
+.earnings-summary { margin-top: 36rpx; padding: 38rpx 34rpx; background: #1F355D; color: #fff; }
+.earnings-summary .eyebrow { color: #A9BEDF; }
+.earnings-total { margin-top: 16rpx; font-size: 72rpx; font-weight: 740; }
+.earnings-count { margin-top: 14rpx; color: #A9BEDF; font-size: 24rpx; }
+.earning-item { gap: 20rpx; margin-bottom: 16rpx; min-height: 112rpx; }
+.earning-info { min-width: 0; }
+.earning-date { font-size: 27rpx; font-weight: 600; }
+.earning-duration { margin-top: 9rpx; color: #929CAA; font-size: 23rpx; }
+.earning-amount { flex-shrink: 0; color: #275C37; font-size: 30rpx; font-weight: 690; }

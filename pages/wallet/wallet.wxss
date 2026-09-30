@@ -1,0 +1,12 @@
+.balance { margin-top: 36rpx; background: #1F355D; color: #fff; padding: 42rpx 34rpx 35rpx; }
+.balance .eyebrow { color: #A9BEDF; }
+.balance-number { font-size: 76rpx; font-weight: 740; margin: 16rpx 0 38rpx; }
+.totals { justify-content: flex-start; gap: 70rpx; border-top: 1rpx solid rgba(255,255,255,.15); padding-top: 28rpx; }
+.label { color: #A9BEDF; font-size: 23rpx; }
+.value { font-size: 29rpx; font-weight: 600; margin-top: 7rpx; }
+.group, .settlement { margin-bottom: 16rpx; }
+.group-name { font-size: 29rpx; font-weight: 630; }
+.group-count { color: #929CAA; font-size: 23rpx; margin-top: 10rpx; }
+.group-money { font-size: 32rpx; font-weight: 690; }
+.settle-button { width: 100%; margin-top: 24rpx; height: 75rpx; font-size: 25rpx; }
+.small { padding: 45rpx 20rpx; }

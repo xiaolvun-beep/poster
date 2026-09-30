@@ -1,0 +1,10 @@
+.filter { margin: 38rpx 0 24rpx; }
+.date-button { background: #E7F3E5; color: #275C37; font-size: 27rpx; padding: 16rpx 25rpx; border-radius: 15rpx; }
+.clear { font-size: 25rpx; color: #7C8999; }
+.delete-hint { margin: -4rpx 0 22rpx; color: #A0AAB6; font-size: 22rpx; }
+.record { margin-bottom: 18rpx; }
+.record-date { font-size: 29rpx; font-weight: 630; }
+.record-time { color: #94A0AC; font-weight: 400; margin-left: 8rpx; }
+.record-boss { color: #8A95A3; font-size: 24rpx; margin-top: 13rpx; }
+.record-amount { font-size: 36rpx; font-weight: 700; }
+.record-status { color: #7F8B99; font-size: 22rpx; margin-top: 18rpx; }

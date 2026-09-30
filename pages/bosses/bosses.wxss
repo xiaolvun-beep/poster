@@ -1,0 +1,6 @@
+.hint { color: #8995A3; font-size: 24rpx; margin: 20rpx 0 32rpx; }
+.entry { min-height: 106rpx; margin-bottom: 16rpx; font-size: 29rpx; }
+.entry-actions { display: flex; align-items: center; gap: 24rpx; }
+.edit { color: #7990BA; font-size: 24rpx; }
+.selected { width: 30rpx; color: #275C37; font-weight: 700; }
+.add { margin-top: 42rpx; height: 90rpx; font-size: 28rpx; }

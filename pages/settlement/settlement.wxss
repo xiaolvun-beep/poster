@@ -1,0 +1,5 @@
+.hero { margin-top: 20rpx; padding: 40rpx 32rpx; }
+.big { font-size: 75rpx; font-weight: 740; margin: 18rpx 0; }
+.item { margin-bottom: 14rpx; font-size: 27rpx; }
+.item .amount { font-weight: 660; font-size: 31rpx; }
+.sub { font-size: 23rpx; margin-top: 10rpx; }

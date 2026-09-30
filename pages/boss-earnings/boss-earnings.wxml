@@ -1,0 +1,7 @@
+<view class="page">
+  <view class="eyebrow">按老板待结算</view><view class="title">{{bossName}}</view>
+  <view class="card earnings-summary"><view class="eyebrow">待结算收入</view><view class="earnings-total amount">¥{{total}}</view><view class="earnings-count">{{count}} 笔工作</view></view>
+  <view class="section-title">收入明细</view>
+  <view wx:if="{{items.length === 0}}" class="empty">{{loading ? '正在读取工作记录…' : '这位老板目前没有待结算工作'}}</view>
+  <view wx:for="{{items}}" wx:key="id" class="card earning-item row" data-id="{{item.id}}" bindtap="open"><view class="earning-info"><view class="earning-date">{{item.date}}</view><view class="earning-duration">工作 {{item.duration}}</view></view><view class="earning-amount amount">¥{{item.amount}} ›</view></view>
+</view>

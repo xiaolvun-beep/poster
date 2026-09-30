@@ -1,0 +1,22 @@
+<view class="detail-page page" wx:if="{{record}}">
+  <view class="detail-heading"><text class="detail-overline">WORK / SUMMARY</text><text class="detail-title">工作详情</text></view>
+
+  <view class="summary-card">
+    <view class="summary-top"><text>本次收入</text><view class="summary-status {{record.status === '已结算' ? 'is-settled' : ''}}">{{record.status}}</view></view>
+    <view class="summary-amount amount">¥{{record.amount}}</view>
+    <view class="summary-boss"><view class="summary-boss-dot"></view><text>{{record.boss}}</text></view>
+    <view class="summary-rule"></view>
+    <view class="summary-stats"><view class="summary-stat"><text class="summary-stat-label">有效时长</text><text class="summary-stat-value amount">{{record.duration}}</text></view><view class="summary-stat-separator"></view><view class="summary-stat"><text class="summary-stat-label">移动距离</text><text class="summary-stat-value amount">{{record.distance}}</text></view></view>
+  </view>
+
+  <view class="track-card">
+    <view class="track-header" bindtap="openFullMap" role="button" aria-label="全屏查看完整轨迹"><view><view class="track-overline">THE ROUTE</view><view class="track-title">完整轨迹</view><view class="track-hint">点击查看全屏地图</view></view><view class="track-symbol">↗</view></view>
+    <view class="detail-map"><track-map points="{{points}}" fit-all="{{true}}" loading="{{trackLoading}}" openable="{{true}}" bindopen="openFullMap" /></view>
+    <view class="track-legend"><view class="legend-item"><view class="legend-dot legend-start"></view><text>起点</text></view><view class="legend-item"><view class="legend-dot legend-end"></view><text>终点</text></view><view class="legend-line"></view><text class="legend-route">蓝色为行走路线</text></view>
+    <view class="track-note">{{trackText}}<text wx:if="{{record.gapCount}}"> · 定位中断 {{record.gapCount}} 次</text></view>
+  </view>
+
+  <view class="info-heading"><text>工作信息</text><text>DETAILS</text></view>
+  <view class="info-card"><view class="info-row"><text>开始时间</text><text>{{record.start}}</text></view><view class="info-row"><text>结束时间</text><text>{{record.end}}</text></view><view class="info-row"><text>有效时长</text><text>{{record.duration}}</text></view><view class="info-row"><text>时薪</text><text>¥{{record.rate}}/小时</text></view><view class="info-row"><text>移动距离</text><text>{{record.distance}}</text></view><view wx:if="{{record.status === '已结算'}}" class="info-row"><text>结算时间</text><text>{{record.settledAt}}</text></view></view>
+  <button wx:if="{{record.status === '待结算'}}" class="settle-one" bindtap="settleOne">确认这笔工资已收到 <text>↗</text></button>
+</view>

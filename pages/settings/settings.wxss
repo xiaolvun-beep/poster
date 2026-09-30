@@ -1,0 +1,8 @@
+.rate, .boss { min-height: 135rpx; }
+.rate-label { font-size: 29rpx; font-weight: 600; }
+.help { font-size: 23rpx; margin-top: 10rpx; }
+.rate-input { display: flex; align-items: center; font-size: 32rpx; font-weight: 650; }
+.rate-input input { width: 130rpx; text-align: right; font-size: 32rpx; }
+.chevron { color: #A5AFBA; font-size: 45rpx; }
+.explanation { color: #5E6B7A; font-size: 25rpx; line-height: 1.7; }
+.paragraph + .paragraph { margin-top: 22rpx; }
